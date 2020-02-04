@@ -62,14 +62,15 @@ import './App.css';
 		// 	<h1>Loading</h1> : (   - smart if else statement,
 				// 19.React 16. 7.0
 
-			return (
+			return !robots.length ?
+			<h1>Loading</h1> : (
 		<div className ='tc'>
 			<h1 className='f1'>RoboFriends</h1>
 			<SearchBox searchChange={this.onSearchChange}/>
 			<Scroll>
 
 			<CardList robots = { filteredRbots }/>
-				
+
 			</Scroll>
 		</div>
 	);
