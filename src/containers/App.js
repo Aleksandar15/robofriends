@@ -30,7 +30,7 @@ import './App.css';
 
 	// this will be after 14.6.3
 	componentDidMount() {
-		fetch('http://jsonplaceholder.typicode.com/users')
+		fetch('https://jsonplaceholder.typicode.com/users')
 			.then(reponse=>	reponse.json())
 			.then(users =>this.setState({ robots: users }));
 		// console.log('check');  14.8
@@ -62,8 +62,7 @@ import './App.css';
 		// 	<h1>Loading</h1> : (   - smart if else statement,
 				// 19.React 16. 7.0
 
-			return !robots.length ?
-			<h1>Loading</h1> : (
+			return (
 		<div className ='tc'>
 			<h1 className='f1'>RoboFriends</h1>
 			<SearchBox searchChange={this.onSearchChange}/>
